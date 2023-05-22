@@ -1,7 +1,11 @@
-growth/
-growth2000/
+# data/growth/*.csv
+# data/value/*.csv
+# data/overlap/*.csv
 
-overlap/
-
-value/
-value2000/
+# crawling/growth_clean/*.csv
+# crawling/growth_search/*.csv
+# crawling/value_clean/*.csv
+# crawling/value_search/*.csv
+# crawling/overlap_clean/*.csv
+# crawling/overlap_search/*.csv
+*.csv
