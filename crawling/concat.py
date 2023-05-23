@@ -28,4 +28,4 @@ def concat(folder_name):
 
         df = pd.concat([df_origin, df2_interpolated], axis=1)
         df.dropna(inplace=True)
-        df.to_csv(f'../data/{folder_name}_clean/{file[:-1]}.csv')
+        df.to_csv(f'../data/{folder_name}_clean/{file[:-1]}')

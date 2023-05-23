@@ -93,6 +93,7 @@ def googleCrawling_mac(text_name, start, finish, DOWNLOAD_PATH):
             driver.find_element(By.XPATH, '/html/body/div[3]/div[2]/div/md-content/div/div/div[1]/trends-widget/ng-include/widget/div/div/div/widget-actions/div/button[1]').click()
             print('downloaded')
         finally:
+            time.sleep(5)
             driver.quit()
             df = pd.read_csv(f'{DOWNLOAD_PATH}/multiTimeline.csv')
             df.columns = [file_name]
