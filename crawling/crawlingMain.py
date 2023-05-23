@@ -1,14 +1,16 @@
+#-*- coding:utf-8 -*-
+
 from googleCrawling import googleCrawling, googleCrawling_mac
 from concat import concat
 
-DOWNLOAD_PATH = '.'
+DOWNLOAD_PATH = 'C:/Users/노최유하/Downloads'
 
 # 재현
 # googleCrawling_mac('value', 0, 500, DOWNLOAD_PATH)
-# # 유하
-# googleCrawling('value', 500, 1071, DOWNLOAD_PATH)
+# # 유하 (500, 1071)
+googleCrawling('value', 1060, 1071, DOWNLOAD_PATH)
 # 이건 둘중 한명이 마지막에 하좌
-concat('value')
+# concat('value')
 
 # # 재형
 # googleCrawling('overlap', 0, 682, DOWNLOAD_PATH)
