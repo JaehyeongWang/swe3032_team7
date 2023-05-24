@@ -47,6 +47,8 @@ def concat_file(folder_name, file_name): #file_name contains .csv
     df2.columns = ['Search']
     df2['Search'] = df2['Search'].replace('<1', 0)
 
+    df2['Search'] = df2['Search'].astype('float')
+
     df2 = df2.resample(rule='D').mean()
     df2_interpolated = df2.interpolate(method='linear')
 
@@ -59,4 +61,4 @@ def concat_file(folder_name, file_name): #file_name contains .csv
     df.to_csv(f'../data/{folder_name}_clean/{file}')
 
 # concat('growth')
-concat_file('growth', 'OCGN.csv')
+concat_file('growth', 'MULN.csv') #OCGN.csv #AMEH.csv #MVIS.csv #MULN.csv
