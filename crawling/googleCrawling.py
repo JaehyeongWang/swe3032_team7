@@ -10,8 +10,8 @@ import os
 import time
 import pandas as pd
 
-# 맥북만
-s = Service('/Users/jewel/Downloads/chromedriver_mac64/chromedriver')
+# # 맥북만
+# s = Service('/Users/jewel/Downloads/chromedriver_mac64/chromedriver')
 
 options = Options()
 options.add_argument('--headless')        # Head-less 설정
