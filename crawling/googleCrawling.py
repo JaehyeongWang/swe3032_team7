@@ -11,10 +11,9 @@ import time
 import pandas as pd
 
 # 맥북만
-s = Service('/Users/jewel/Downloads/chromedriver_mac64/chromedriver')
-
+s = Service('chromedriver')
 options = Options()
-options.add_argument('--headless')        # Head-less 설정
+# options.add_argument('--headless')        # Head-less 설정
 # options.add_argument('--no-sandbox')
 # options.add_argument('--disable-dev-shm-usage')
 
