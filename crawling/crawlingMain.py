@@ -14,5 +14,5 @@ DOWNLOAD_PATH = f'C:/Users/samsung/Desktop/skku/4_1/AI_project/project/swe3032_t
 googleCrawling('overlap', 0, 682, DOWNLOAD_PATH)
 concat('overlap')
 # # 혜인
-googleCrawling('growth', 0, 503, DOWNLOAD_PATH)
-concat('growth')
+# googleCrawling('growth', 0, 503, DOWNLOAD_PATH)
+# concat('growth')
