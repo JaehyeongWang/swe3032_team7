@@ -55,4 +55,15 @@ def makeY(folder_name, filelength):
 
     y = np.column_stack([yGrowths.T, yValues.T])
     return y
-    
+
+def makeYValue(folder_name, filelength):
+
+    if folder_name=='growth':
+        yValues = np.zeros(filelength)
+    elif folder_name=='value':
+        yValues = np.ones(filelength)
+    elif folder_name=='overlap':
+        yValues = np.ones(filelength)
+
+    y = np.column_stack([yValues.T])
+    return y
