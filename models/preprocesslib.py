@@ -56,3 +56,34 @@ def makeY(folder_name, filelength):
     y = np.column_stack([yGrowths.T, yValues.T])
     return y
     
+def splitData(x, y, train_ratio):
+    # shuffle data
+    permutation = np.random.permutation(len(x))
+    x = x[permutation]
+    y = y[permutation]
+
+    # split data
+    n_train_samples = int(train_ratio * len(x))
+    x_train, x_test = x[:n_train_samples], x[n_train_samples:]
+    y_train, y_test = y[:n_train_samples], y[n_train_samples:]
+
+    return x_train, x_test, y_train, y_test
+
+#split data for cross validation
+def splitDataCrossVal(x, y, fold):
+    # shuffle data
+    permutation = np.random.permutation(len(x))
+    x = x[permutation]
+    y = y[permutation]
+
+    x_split = []
+    y_split = []
+    # split data
+    n_samples = int(len(x)/fold)
+    for i in range(fold-1):
+      x_split.append(x[i*n_samples:(i+1)*n_samples])
+      y_split.append(y[i*n_samples:(i+1)*n_samples])
+    x_split.append(x[(fold-1)*n_samples:])
+    y_split.append(y[(fold-1)*n_samples:])
+
+    return x_split, y_split
